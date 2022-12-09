@@ -13,7 +13,7 @@ public class Car {
         this.model = Objects.requireNonNullElse(model, "default");
         this.countryProduction = Objects.requireNonNullElse(countryProduction, "default");
 
-        if (engineSize <= 0) {
+        if (Double.compare(engineSize,0D)==0) {
             this.engineSize = 1.5;
         } else {
             this.engineSize = engineSize;
